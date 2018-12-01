@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+    android:id="@+id/nav_message"
+    android:title="@string/action_message"
+    android:icon="@drawable/message"
+    />
+
+    <item
+        android:id="@+id/nav_designer"
+        android:title="@string/action_designer"
+        android:icon="@drawable/cake_layered"
+        />
+
+    <item
+        android:id="@+id/nav_calendar"
+        android:title="@string/action_calendar"
+        android:icon="@drawable/calendar"
+        />
+
+
+</menu>
