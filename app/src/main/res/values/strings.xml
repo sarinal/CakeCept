@@ -1,6 +1,5 @@
 <resources>
     <string name="app_name">CakeCept</string>
-    <integer name="medium_size">20</integer>
     <string name="action_erase">Erase</string>
     <string name="action_delete">Delete</string>
     <string name="action_undo">Undo</string>
@@ -17,4 +16,9 @@
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <!--Paint Brush Size-->
+    <string name="sml">Small</string>
+    <string name="med">Medium</string>
+    <string name="lrg">Large</string>
 </resources>

@@ -18,7 +18,8 @@
         </activity>
         <activity android:name=".Designer"
             android:label="Cake Designer"
-            android:parentActivityName=".MainActivity"/>
+            android:parentActivityName=".MainActivity"
+          />
         <activity android:name=".Chat"
             android:label="Messages"
             android:parentActivityName=".MainActivity"
@@ -26,6 +27,8 @@
         <activity android:name=".Calendar"
             android:label="Calendar"
             android:parentActivityName=".MainActivity"/>
-    </application>
 
+
+    </application>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 </manifest>
