@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="BBMSdkSupport.darkdialog" parent="Theme.AppCompat.Dialog">
+        <item name="colorAccent">#087099</item>
+    </style>
+
+    <style name="AppSplashDialog" parent="BBMSdkSupport.darkdialog">
+        <!--
+            The Network Connected dialog is shown in an activity that has set a value
+            for the android:background item. In order to avoid displaying the
+            same background in the dialog, set that background to @null.
+        -->
+        <item name="android:background">@null</item>
+    </style>
+
+    <style name="ConversationDate" parent="@android:style/TextAppearance">
+        <item name="android:textColor">@color/darkgreyText</item>
+        <item name="android:textSize">11sp</item>
+    </style>
+
+    <style name="ConversationSender" parent="@android:style/TextAppearance">
+        <item name="android:textColor">@color/chat_bubble_text_incoming</item>
+        <item name="android:textSize">13sp</item>
+    </style>
+
+    <declare-styleable name="Setting">
+        <attr name="settingLabel" format="string" />
+        <attr name="settingSummary" format="string" />
+        <!--switch style only valid for Settings with a checkbox/switch-->
+        <!--true implies switchCompat, false implies checkBox-->
+        <attr name="settingSwitch" format="boolean"/>
+        <attr name="hideDivider" format="boolean"/>
+    </declare-styleable>
+
+    <style name="SettingLabel">
+        <item name="android:textSize">@dimen/fontSizeMedium</item>
+        <item name="android:textColor">@color/settingsLabelColor</item>
+    </style>
+
+    <style name="Divider">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">1dp</item>
+        <item name="android:background">?android:attr/listDivider</item>
+    </style>
+
+</resources>

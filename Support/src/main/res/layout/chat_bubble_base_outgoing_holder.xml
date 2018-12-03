@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright (c) 2017 BlackBerry.  All Rights Reserved.
+  ~
+  ~ You must obtain a license from and pay any applicable license fees to
+  ~ BlackBerry before you may reproduce, modify or distribute this
+  ~ software, or any work that includes all or part of this software.
+  ~
+  ~ This file may contain contributions from others. Please review this entire
+  ~ file for other proprietary rights or license notices.
+  -->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/conversation_chat_row_padding_B"
+    android:paddingLeft="@dimen/conversation_chat_row_padding_H"
+    android:paddingRight="@dimen/conversation_chat_row_padding_H">
+
+    <com.bbm.sdk.support.ui.widgets.util.MaxWidthLinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:orientation="vertical"
+        app:maxWidth="@dimen/conversation_chat_bubble_max_width_outgoing">
+
+        <LinearLayout
+            android:id="@+id/message_header"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_marginBottom="@dimen/conversation_chat_timestamp_padding_B"
+            android:layout_marginEnd="0dp"
+            android:layout_marginStart="@dimen/conversation_chat_bubble_margin_outgoing"
+            android:layout_marginTop="@dimen/conversation_chat_row_padding_T"
+            android:orientation="horizontal">
+
+            <!-- Date -->
+            <TextView
+                android:id="@+id/message_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:singleLine="true"
+                android:textAppearance="@style/ConversationDate"
+                android:textIsSelectable="false" />
+        </LinearLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/conversation_chat_bubble_margin_outgoing">
+
+            <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/chat_bubble_background_container"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:orientation="horizontal">
+
+                <!-- Priority -->
+                <ImageView xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:id="@+id/priority"
+                    android:layout_width="@dimen/priority_width"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="@dimen/priority_margin_end"
+                    android:src="@drawable/priority"
+                    android:visibility="gone" />
+
+                <!-- Message Content get appended beside the priority-->
+                <FrameLayout
+                    android:id="@+id/content_specific_container"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:layout_marginEnd="0dp" />
+            </LinearLayout>
+        </FrameLayout>
+
+
+    </com.bbm.sdk.support.ui.widgets.util.MaxWidthLinearLayout>
+</LinearLayout>

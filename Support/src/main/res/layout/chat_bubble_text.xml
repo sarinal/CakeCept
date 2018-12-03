@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright (c) 2017 BlackBerry.  All Rights Reserved.
+  ~
+  ~ You must obtain a license from and pay any applicable license fees to
+  ~ BlackBerry before you may reproduce, modify or distribute this
+  ~ software, or any work that includes all or part of this software.
+  ~
+  ~ This file may contain contributions from others. Please review this entire
+  ~ file for other proprietary rights or license notices.
+  -->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="@dimen/conversation_chat_bubble_padding">
+
+    <!-- Status -->
+    <ImageView
+        android:id="@+id/message_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="@dimen/conversation_chat_bubble_incoming_status_margin_R"
+        android:layout_marginEnd="@dimen/conversation_chat_bubble_incoming_status_margin_R"
+        android:src="@drawable/ic_item_message_read"/>
+
+    <!-- Body -->
+    <TextView
+        android:id="@+id/message_body"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:maxWidth="@dimen/conversation_chat_bubble_max_width"
+        android:textSize="@dimen/fontSizeMedium"
+        android:textIsSelectable="false" />
+
+</LinearLayout>

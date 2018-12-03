@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright (c) 2017 BlackBerry.  All Rights Reserved.
+  ~
+  ~ You must obtain a license from and pay any applicable license fees to
+  ~ BlackBerry before you may reproduce, modify or distribute this
+  ~ software, or any work that includes all or part of this software.
+  ~
+  ~ This file may contain contributions from others. Please review this entire
+  ~ file for other proprietary rights or license notices.
+  -->
+
+<resources>
+    <color name="darkgreyText">#686868</color>
+    <color name="chat_bubble_text_incoming">#262626</color>
+    <color name="primaryColor">#087099</color>
+    <color name="divider_color">#C8C8C8</color>
+    <color name="sliding_tab_background">#F5F5F5</color>
+
+    <color name="low_priority_message">#4db3db</color>
+    <color name="high_priority_message">#ff3333</color>
+
+    <color name="settingsLabelColor">#000000</color>
+</resources>

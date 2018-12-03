@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright (c) 2017 BlackBerry.  All Rights Reserved.
+  ~
+  ~ You must obtain a license from and pay any applicable license fees to
+  ~ BlackBerry before you may reproduce, modify or distribute this
+  ~ software, or any work that includes all or part of this software.
+  ~
+  ~ This file may contain contributions from others. Please review this entire
+  ~ file for other proprietary rights or license notices.
+  -->
+
+<resources>
+    <!--spacing outside bubble (ie. from edge of screen)-->
+    <dimen name="conversation_chat_row_padding_H">16dp</dimen>
+    <dimen name="conversation_chat_row_padding_B">2dp</dimen>
+    <dimen name="conversation_chat_row_padding_T">8dp</dimen>
+
+    <dimen name="conversation_chat_bubble_avatar_size">40dp</dimen>
+    <dimen name="conversation_chat_bubble_incoming_status_margin_right">4dp</dimen>
+    <dimen name="conversation_chat_bubble_avatar_top_padding">20dp</dimen>
+
+    <!--large indent left of outgoing/right of incoming-->
+    <dimen name="conversation_chat_bubble_margin_outgoing">60dp</dimen>
+    <!--incoming margin = outgoing margin - the width of avatar+margin-->
+    <dimen name="conversation_chat_bubble_margin_incoming">16dp</dimen>
+
+    <!--maximum width of a chat bubble-->
+    <dimen name="conversation_chat_bubble_max_width">400dp</dimen>
+    <!-- conversation_chat_bubble_max_width + the width of avatar + margin-->
+    <dimen name="conversation_chat_bubble_max_width_outgoing">444dp</dimen>
+
+    <!--spacing inside bubble-->
+    <dimen name="conversation_chat_bubble_padding">6dp</dimen>
+
+    <!--spacing between status and msg body-->
+    <dimen name="conversation_chat_bubble_incoming_status_margin_R">4dp</dimen>
+    <dimen name="conversation_chat_bubble_outgoing_status_margin_R">4dp</dimen>
+
+    <!--spacing between timestamp and content-->
+    <dimen name="conversation_chat_timestamp_padding_B">2dp</dimen>
+    <dimen name="conversation_chat_date_header_spacing_H">8dp</dimen>
+
+    <!-- Priority Indicator for Message Bubbles -->
+    <dimen name="priority_width">15dp</dimen>
+    <dimen name="priority_margin_end">-3dp</dimen>
+
+    <!--chat bubble corner dimension-->
+    <dimen name="conversation_chat_background_corner_radius">6dp</dimen>
+
+    <dimen name="fontSizeMedium">16sp</dimen>
+</resources>

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright (c) 2017 BlackBerry.  All Rights Reserved.
+  ~
+  ~ You must obtain a license from and pay any applicable license fees to
+  ~ BlackBerry before you may reproduce, modify or distribute this
+  ~ software, or any work that includes all or part of this software.
+  ~
+  ~ This file may contain contributions from others. Please review this entire
+  ~ file for other proprietary rights or license notices.
+  -->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:paddingBottom="@dimen/conversation_chat_row_padding_B"
+    android:paddingLeft="@dimen/conversation_chat_row_padding_H"
+    android:paddingRight="@dimen/conversation_chat_row_padding_H">
+
+    <!-- message_photo_container is needed to preserve the avatar space when merging bubbles-->
+    <LinearLayout
+        android:id="@+id/message_photo_container"
+        android:layout_width="@dimen/conversation_chat_bubble_avatar_size"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/conversation_chat_bubble_incoming_status_margin_right"
+        android:layout_marginStart="0dp"
+        android:orientation="horizontal">
+        <!-- Photo -->
+        <ImageView
+            android:id="@+id/message_photo"
+            android:layout_width="@dimen/conversation_chat_bubble_avatar_size"
+            android:layout_height="@dimen/conversation_chat_bubble_avatar_size"
+            android:layout_gravity="top"
+            android:layout_marginEnd="@dimen/conversation_chat_bubble_incoming_status_margin_right"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="@dimen/conversation_chat_bubble_avatar_top_padding" />
+    </LinearLayout>
+
+    <com.bbm.sdk.support.ui.widgets.util.MaxWidthLinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:maxWidth="@dimen/conversation_chat_bubble_max_width">
+
+        <include layout="@layout/chat_bubble_message_header_incoming" />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/conversation_chat_bubble_margin_incoming"
+            android:layout_marginStart="0dp"
+            android:orientation="horizontal">
+
+            <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/chat_bubble_background_container"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <!-- Priority -->
+                <ImageView xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:id="@+id/priority"
+                    android:layout_width="@dimen/priority_width"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="@dimen/priority_margin_end"
+                    android:src="@drawable/priority"
+                    android:visibility="visible" />
+
+                <!-- Message Content get appended beside the priority-->
+                <FrameLayout
+                    android:id="@+id/content_specific_container"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start" />
+            </LinearLayout>
+        </FrameLayout>
+
+    </com.bbm.sdk.support.ui.widgets.util.MaxWidthLinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,100 @@
+/*
+ * Copyright (c) 2018 BlackBerry.  All Rights Reserved.
+ *
+ * You must obtain a license from and pay any applicable license fees to
+ * BlackBerry before you may reproduce, modify or distribute this
+ * software, or any work that includes all or part of this software.
+ *
+ * This file may contain contributions from others. Please review this entire
+ * file for other proprietary rights or license notices.
+ */
+
+apply plugin: 'com.android.library'
+
+
+repositories {
+    flatDir {
+        //point to shared dir with AAR file in it
+        dirs 'C:/Users/sarii/Documents/CakeCept/app/libs'
+    }
+    google()
+}
+
+android {
+    compileSdkVersion 28
+
+    // This is to indicated the Java target version for the aar, right now
+    // this is set to 1.8
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    defaultConfig {
+        minSdkVersion 19
+        targetSdkVersion 28
+        versionCode 1
+        versionName "1.0"
+    }
+
+    flavorDimensions "authProvider"
+
+    productFlavors {
+        //No auth/identity implementation is included
+        noAuthProvider {
+            dimension "authProvider"
+        }
+        //Includes auth/identity implementation using Google Sign-In and Firebase Database
+        google {
+            dimension "authProvider"
+        }
+//        //Includes auth/identity implementation using Azure Active Directory
+//        azure {
+//            minSdkVersion 21
+//            dimension "authProvider"
+//        }
+    }
+
+    buildTypes {
+        debug {
+            minifyEnabled false
+        }
+        release {
+            //Leave library files un-obfuscated, they can be obfuscated during application build
+            minifyEnabled false
+            consumerProguardFile('bbmsdk-support-proguard.pro')
+        }
+    }
+}
+
+dependencies {
+    implementation(name: 'bbm_sdk-release', ext: 'aar')
+
+    implementation 'com.google.guava:guava:22.0-android'
+    implementation 'com.android.support:appcompat-v7:28.0.0'
+    implementation 'com.android.support:support-v4:28.0.0'
+    implementation 'com.android.support:recyclerview-v7:28.0.0'
+
+    // Firebase Cloud Messaging dependencies (for push)
+    implementation 'com.google.firebase:firebase-messaging:11.4.2'
+
+    // Include Google play services auth module to use Open ID.
+    googleImplementation 'com.google.android.gms:play-services-auth:11.4.2'
+    //needed for firebase DB to store user management
+    googleImplementation 'com.google.firebase:firebase-database:11.4.2'
+    //needed for firebase DB rules checking auth to work
+    googleImplementation 'com.google.firebase:firebase-auth:11.4.2'
+
+//    //Microsoft Graph SDK used to access and update users in the active directory
+//    azureImplementation 'com.microsoft.graph:msgraph-sdk-android:1.3.2'
+//    //Microsoft Authentication Library used for requesting authentication tokens
+//    azureImplementation ('com.microsoft.identity.client:msal:0.1.1') {
+//        //Exclude older versions of app compat and custom tabs included in msal library
+//        exclude group: 'com.android.support', module: 'appcompat-v7'
+//        exclude group: 'com.android.support', module: 'customtabs'
+//    }
+//    //Get matching version of customtabs to use with msal
+//    azureImplementation 'com.android.support:customtabs:28.0.0'
+
+
+}
