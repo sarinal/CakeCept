@@ -22,9 +22,14 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
-            android:text="Main Layout"
+            android:text="Recent Designs"
             android:textAlignment="center"
-            />
+            android:textSize="50px" />
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/view_pager"
+            android:layout_width="match_parent"
+            android:layout_height="300dp" />
     </LinearLayout>
         <android.support.design.widget.NavigationView
             android:id="@+id/nav_view"
